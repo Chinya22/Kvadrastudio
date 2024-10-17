@@ -7,54 +7,71 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <title>prj</title>
-
-    <script>
-      var imageData = {
-        avif: 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=',
-        webp: 'data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA',
-      };
-  
-      // Функция проверки написана на основе документации Google:
-      // https://developers.google.com/speed/webp/faq#in_your_own_javascript
-  
-      function checkImageFormatSupport(imageFormat, callback) {
-        var img = new Image();
-        
-        img.src = imageData[imageFormat];
-        
-        img.onload = function () { var result = (img.width > 0) && (img.height > 0); callback(result); };
-        img.onerror = function () { callback(false); };
-      }
-  
-      // Проверяем поддержку WebP Lossy (сжатие с потерями)
-      
-      checkImageFormatSupport('webp', function (isWebpLossySupported) {
-        if (isWebpLossySupported) {
-          document.documentElement.className = document.documentElement.className.replace('no-webplossy', 'webplossy');
-        }
-      });
-  
-      // Проверяем поддержку AVIF
-    
-      checkImageFormatSupport('avif', function (isAvifSupported) {
-        if (isAvifSupported) {
-          document.documentElement.className = document.documentElement.className.replace('no-avif', 'avif');
-        }
-      });
-  </script>
-
+    <title>Kvadrastudio</title>
   </head>
   <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header_firstLine">
+          <div class="header_firstLine_adress txtDark">
+            г. Ярославль,
+            <span class="txtLight"> ул. Щапова, 20, Офис 326 </span>
+          </div>
+          <a href="mailto:" class="header_firstLine_email txtDark"
+            >info@kvadrastudio.ru</a
+          >
+          <img
+            src="img/main_logo.svg"
+            alt="main_logo"
+            class="header_firstLine_logo"
+          />
+          <div class="header_firstLine_tel txtDark">
+            +7 (4852) 94-28-50
+            <span class="txtLight"> Пн-Пт: 9.00 - 18.00 </span>
+          </div>
+          <button class="header_firstLine_btn txtDark">Перезвоните мне</button>
+        </div>
+        <div class="header_secondLine">
+          <a href="#" class="header_secondLine_link">Портфолио</a>
+          <a href="#" class="header_secondLine_link">услуги</a>
+          <a href="#" class="header_secondLine_link">Цены</a>
+          <a href="#" class="header_secondLine_link">На заказ</a>
+          <a href="#" class="header_secondLine_link">О нас</a>
+          <a href="#" class="header_secondLine_link">Блог</a>
+          <a href="#" class="header_secondLine_link">Контакты</a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="firstScreen">
+        <iframe
+          class="firstScreen_video"
+          width="100%"
+          height="405"
+          src="https://rutube.ru/play/embed/193977e7a51f7c80b722c91b0cb8f8bb"
+          frameborder="0"
+        ></iframe>
+        <div class="wrapper">
+          <h1 class="firstScreen_mainTitle">
+            Создаём <span>Идеальное Пространство.</span> для вас.
+          </h1>
+          <button class="firstScreen_btnPlayVideo">
+            <img
+              src="img/btnPlayVideo.svg"
+              alt="PlayVideo"
+              class="firstScreen_btnPlayVideo_logo"
+            />
+          </button>
+          <img src="img/ArrowDown.svg" alt="ArrowDown" class="arrowDown" />
+          <div class="firstScreen_strokeBtn">
+            <button class="firstScreen_strokeBtn_calculateProjectBtn">
+              Рассчитать проект
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
 
-   <picture>
-      <source srcset="img/avif/quadBike.avif" type="image/avif" />
-      <source srcset="img/webp/quadBike.webp" type="image/webp" />
-      <source srcset="img/png/quadBike.png" />
-      <img src="img/png/quadBike.png" alt="" />
-    </picture>
-
-
-   <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
