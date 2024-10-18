@@ -1,0 +1,85 @@
+.fourthScreen {
+    width            : 100%;
+    display          : flex;
+    justify-content  : center;
+    background-image : url(../img/backgroundForReviews.png);
+    background-repeat: no-repeat;
+    height           : 900px;
+    padding          : 50px 0 100px 0;
+    background-size: cover;
+    margin-bottom: 200px;
+
+    .wrapper {
+        display       : flex;
+        flex-direction: column;
+    }
+
+    &_title {
+        @include ProximaNovaLight(80);
+        text-transform: uppercase;
+        color         : $color-white;
+        letter-spacing: 1.6px;
+
+        span {
+            @include ProximaNovaRegular(80);
+        }
+
+        ;
+    }
+
+    &_review {
+        display        : flex;
+        flex-grow      : 1;
+        align-items    : center;
+        justify-content: space-between;
+
+
+        &_text {
+            display: grid;
+            grid-template-areas: 
+            "a b"
+            "c d";
+            &_quotes {
+
+                &_logo {
+                    
+                    height      : 70px;
+                    width       : 90px;
+                }
+                margin-right: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-area: a;
+            }
+
+            &_content {
+                display       : flex;
+                flex-direction: column;
+                color         : $color-white;
+                @include ProximaNovaLight(32);
+                line-height: 56px;
+                grid-area: b;
+            }
+
+            &_nameAndData {
+                margin-top     : 50px;
+                display        : flex;
+                justify-content: space-between;
+                color          : #C5C5C5;
+                @include ProximaNovaLightItalic(28);
+                grid-area: d
+            }
+        }
+    }
+
+    &_arrow {
+        display        : flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &_logo {
+            width: 215px;
+        }
+    }
+}

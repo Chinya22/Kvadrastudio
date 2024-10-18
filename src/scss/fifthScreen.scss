@@ -1,0 +1,102 @@
+.fifthScreen {
+    width         : 100%;
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &_title {
+        @include ProximaNovaRegular(80);
+        text-transform: uppercase;
+        color         : $primary-text-color;
+        letter-spacing: 1.5px;
+        margin-bottom : 20px;
+    }
+
+    &_text {
+        @include ProximaNovaRegular(32);
+        color         : $primary-text-color;
+        letter-spacing: 0.6px;
+        margin-bottom : 50px;
+    }
+
+    &_btns {
+        margin-bottom: 50px;
+
+        &_item {
+
+            &.active,
+            &:hover {
+                border-bottom: 1px solid $primary-text-color;
+                color        : $primary-text-color;
+            }
+
+            @include ProximaNovaRegular(20);
+            color           : $secondary-text-color;
+            letter-spacing  : 0.4px;
+            border          : none;
+            outline         : none;
+            margin-right    : 30px;
+            background-color: $color-white;
+            cursor          : pointer;
+            padding         : 0 0 5px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &_cards {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+        gap                  : 30px;
+        
+
+        &_item {
+            margin-bottom        : 70px;
+            &_img {
+                width        : 745px;
+                height       : 700px;
+                margin-bottom: 30px;
+            }
+
+            &_title {
+                @include ProximaNovaRegular(20);
+                text-transform: uppercase;
+                color         : $primary-text-color;
+                margin-bottom : 20px;
+                letter-spacing: 0.6px;
+            }
+
+            &_roomArea {
+                @include ProximaNovaRegular(20);
+                text-transform: uppercase;
+                color         : $primary-text-color;
+                margin-bottom : 20px;
+                letter-spacing: 0.6px;
+            }
+
+            &_adress {
+                @include ProximaNovaRegular(20);
+                text-transform: uppercase;
+                color         : #888888;
+                margin-bottom : 20px;
+                letter-spacing: 0.6px;
+            }
+
+            &_btn {
+                @include ProximaNovaSemiBold(20);
+                color           : $primary-text-color;
+                border          : none;
+                outline         : none;
+                border-bottom   : 1px solid $primary-text-color;
+                cursor          : pointer;
+                background-color: $color-white;
+                text-transform  : uppercase;
+                letter-spacing  : 0.5px;
+                padding-bottom  : 5px;
+            }
+        }
+    }
+}
