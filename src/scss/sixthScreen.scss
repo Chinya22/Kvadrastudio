@@ -1,0 +1,53 @@
+.sixthScreen {
+    display: flex;
+    height: 765px;
+    margin-bottom: 200px;
+    &_img {
+        width: 60%;
+        background-image: url(../img/designeSixthScreen.png);
+        background-size: cover;
+        background-position: top left;
+        
+    }
+    &_technicalInspection {
+        width: 40%;
+        background-color: $primary-text-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 100px 25px;
+        position: relative;
+        &_line {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            height: 250px;
+            width: 1px;
+        }
+        &_txt {
+            @include ProximaNovaRegular(28);
+            color: $color-white;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            line-height: 50px;
+            width: 570px;
+        }
+        &_btn {
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            color: $color-white;
+            @include ProximaNovaSemiBold(54);
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            &::after {
+                content: url(../img/ArrowSixthScreen.svg);
+                display: inline-block;
+                width: 120px;
+                margin-left: 100px;
+            }
+        }
+    }
+}

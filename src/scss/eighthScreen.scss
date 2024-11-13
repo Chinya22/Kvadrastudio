@@ -1,0 +1,67 @@
+.eighthScreen {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+
+    &_title {
+        text-transform: uppercase;
+        color         : $primary-text-color;
+        @include ProximaNovaLight(80);
+        letter-spacing: 1.5px;
+        margin-bottom: 100px;
+        span {
+            @include ProximaNovaRegular(80);
+        }
+
+    }
+
+    &_examples {
+        display: flex;
+        justify-content: space-between;
+        &_imgAndText {
+            
+            &_img {
+                width: 500px;
+                height: 500px;
+                margin-bottom: 50px;
+            }
+
+            &_text {
+                color: #000000;
+                @include ProximaNovaLight(60);
+                max-width: 417px;
+                text-transform: uppercase;
+                line-height: 80px;
+                letter-spacing: 1.2px;
+            }
+
+            
+        }
+
+        &_designe {
+            margin-bottom: 130px;
+            position: relative;
+            &_livingRoom {
+                width: 620px;
+                height: 620px;
+            }
+
+            &_plan {
+                width: 285px;
+                height: 325px;
+                position: absolute;
+                opacity: 0.8;
+                top: 200px;
+                left: -187px;
+            }
+        }
+    }
+    .ArrowDownBlack {
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        height: 120px;
+    }
+}

@@ -1,0 +1,137 @@
+.thirteenthScreen {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    background-color: $primary-text-color;
+    padding         : 100px 0;
+    height          : 1915px;
+    position: relative;
+    margin-bottom: 100px;
+
+    .lineThirteenthScreen {
+        position: absolute;
+        right: 290px;
+        top: 0;
+    }
+
+    &_title {
+        @include ProximaNovaLight(80);
+        color         : $color-white;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        margin-bottom : 20px;
+
+        span {
+            @include ProximaNovaRegular(80);
+        }
+    }
+
+    &_description {
+        @include ProximaNovaRegular(32);
+        color         : $color-white;
+        width         : 975px;
+        letter-spacing: 0.6px;
+        line-height   : 50px;
+        margin-bottom : 100px;
+    }
+
+    &_architecture {
+        width              : 100%;
+        background-image   : url(../img/architecture.png);
+        background-position: right;
+        background-repeat  : no-repeat;
+        background-size    : 1375px 100%;
+        display            : flex;
+        justify-content    : center;
+        height             : 400px;
+        margin-bottom      : 100px;
+
+        &_text {
+            width           : 680px;
+            height          : 140px;
+            background-color: $primary-text-color-opacity;
+            border-left     : 1px solid #FCFCFC;
+            color           : $color-white;
+            margin-top      : 85px;
+            @include ProximaNovaRegular(60);
+            text-transform: uppercase;
+            padding-left  : 100px;
+            display       : flex;
+            align-items   : center;
+        }
+    }
+
+    &_repair {
+        width              : 100%;
+        background-image   : url(../img/repair.png);
+        background-position: left;
+        background-repeat  : no-repeat;
+        background-size    : 1375px 100%;
+        height             : 400px;
+        margin-bottom      : 100px;
+        display            : flex;
+        justify-content    : center;
+
+        .wrapper {
+            display        : flex;
+            justify-content: flex-end;
+        }
+
+        &_text {
+            width           : 680px;
+            height          : 140px;
+            background-color: $primary-text-color-opacity;
+            border-right    : 1px solid #FCFCFC;
+            color           : $color-white;
+            margin-top      : 85px;
+            @include ProximaNovaRegular(60);
+            text-transform: uppercase;
+            padding-left  : 333px;
+            display       : flex;
+            align-items   : center;
+        }
+    }
+
+    &_customMadeProducts {
+        width              : 100%;
+        background-image   : url(../img/custom-madeProduct.png);
+        background-position: right;
+        background-repeat  : no-repeat;
+        background-size    : 1375px 100%;
+        display            : flex;
+        justify-content    : center;
+        height             : 400px;
+        position           : relative;
+
+        .ellipseThirteenthScreen {
+            position: absolute;
+            left    : -40px;
+            top     : -283px;
+            width   : 370px;
+            height  : 370px;
+        }
+        .wrapper {
+            position: relative;
+        }
+        .arrowDownThirteenthScreen {
+            position: absolute;
+            left: -7px;
+            bottom: -40px;
+            cursor: pointer;
+        }
+
+        &_text {
+            width           : 790px;
+            height          : 140px;
+            background-color: $primary-text-color-opacity;
+            border-left     : 1px solid #FCFCFC;
+            color           : $color-white;
+            margin-top      : 85px;
+            @include ProximaNovaRegular(60);
+            text-transform: uppercase;
+            padding-left  : 100px;
+            display       : flex;
+            align-items   : center;
+        }
+    }
+}

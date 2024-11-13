@@ -1,0 +1,76 @@
+.eleventhScreen {
+    background-image: url(../img/bgEleventhScreen.png);
+    display: flex;
+    
+    justify-content: center;
+    padding: 240px 0 110px 0;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 1015px;
+    background-size: 100% 600px;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after{
+        content:'';
+        
+        background: linear-gradient(transparent, white);
+        display: block;
+        position: absolute;
+        top: calc(600px - 240px);
+        left: 0;
+        width: 100%;
+        height: 240px;
+    }
+
+
+    &_aboutUs {
+        z-index: 2;
+        width: 1320px;
+        height: 665px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.05);
+        
+        padding: 60px 50px 40px 50px;
+        &_title {
+            @include ProximaNovaLight(80);
+            text-transform: uppercase;
+            color: $primary-text-color;
+            letter-spacing: 1.6px;
+            margin-bottom: 30px;
+            letter-spacing: 1.6px;
+            span {
+                @include ProximaNovaRegular(80);
+            }
+
+        }
+        &_subtitle {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            @include ProximaNovaRegular(28);
+            color: $primary-text-color;
+            letter-spacing: 0,6px
+        }
+        &_info {
+            @include ProximaNovaRegular(20);
+            color: $primary-text-color;
+            margin-bottom: 30px;
+            line-height: 32px;
+            letter-spacing: 0.2px;
+            
+
+        }
+        &_btn {
+            color: #897163;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #897163;
+            width: 130px;
+            height: 42px;
+            @include ProximaNovaSemiBold(20);
+            cursor: pointer;
+            line-height: 42px;
+            background-color: $color-white;
+            letter-spacing: 0.2px;
+        }
+    }
+}

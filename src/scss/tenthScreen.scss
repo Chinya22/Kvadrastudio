@@ -1,0 +1,139 @@
+.tenthScreen {
+    background-image: url(../img/bgTenthScreen.png);
+    background-position: top;
+    width         : 100%;
+    background-size: 100% 825px;
+    background-repeat: no-repeat;
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    margin-bottom : 200px;
+    height: 1460px;
+    position: relative;
+
+    .diningRoom {
+        position: absolute;
+        width: 485px;
+        height: 485px;
+        bottom: 0;
+        left: 329px;
+        
+    }
+    .plan {
+        position: absolute;
+        top: 147px;
+        right: 458px;
+        width: 360px;
+        height: 325px;
+        
+    }
+    .ellipse2 {
+        position: absolute;
+        right: 90px;
+        bottom: 59px;
+        width: 355px;
+        height: 355px;
+
+    }
+
+    &_title {
+        @include ProximaNovaLight(80);
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: $primary-text-color;
+        
+        span {
+            @include ProximaNovaRegular(80);
+        }
+
+    }
+    &_tariffs {
+        display: flex;
+        &_item {
+            width: 485px;
+            height: 900px;
+            box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.1);
+            background-color: $color-white;
+            margin-right: 30px;
+            padding: 30px 30px 50px 30px;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            &:first-child {
+                margin-top: 50px;
+            }
+            &:nth-child(2) {
+                margin-top: 150px;
+            }
+            &:last-child {
+                margin-top: 250px;
+                margin-right: 0;
+                
+            }
+            &_title {
+                color: #897163;
+                border-bottom: 2px solid $primary-text-color;
+                @include ProximaNovaSemiBold(28);
+                text-transform: uppercase;
+                margin-bottom: 50px;
+                line-height: 50px;
+                vertical-align: baseline;
+                align-self: flex-start;
+                
+            }
+            &_list {
+                list-style-position: inside;
+                color: #222222;
+                
+                &_item {
+                    @include ProximaNovaRegular(20);
+                    line-height: 32px;
+                    margin-bottom: 50px;
+                }
+            }
+            &_price {
+                @include ProximaNovaRegular(20);
+                color: $primary-text-color;
+                margin-bottom: 50px;
+                span {
+                    color: #897163;
+                    @include AshleyCapitaliSofiaRegular(100);
+                }
+
+            }
+            .brownBtn {
+                background-color: #897163;
+                height: 55px;
+                width: 100%;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                @include ProximaNovaSemiBold(18);
+                color: $color-white;
+                text-transform: uppercase;
+                line-height: 56px;
+            }
+            &_downloadPriceBtn {
+                margin-top: 30px;
+                height: 55px;
+                width: 100%;
+                background-color: transparent;
+                color: $primary-text-color;
+                cursor: pointer;
+                border: 1px solid $primary-text-color;
+                outline: none;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include ProximaNovaSemiBold(18);
+                line-height: 56px;
+                &_logo {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
